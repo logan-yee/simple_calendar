@@ -31,7 +31,7 @@ A modern, responsive web-based calendar application that allows users to manage 
 
 2. Navigate to the project directory:
    ```bash
-   cd calendar-app
+   cd app
    ```
 
 3. Open `Calendar.html` in your web browser:
