@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="calendar-container">
+        <div class="header-container">
+            <div id="user-info" style="display: none;">
+                Welcome, <span id="username-display"></span>
+            </div>
+            <button id="login-button">Login</button>
+        </div>
+        <div id="calendar-header">
+            <button id="prev">&lt;</button>
+            <h2 id="month-year"></h2>
+            <button id="next">&gt;</button>
+        </div>
+        <div id="calendar-grid">
+            <div class="day-header">Sunday</div>
+            <div class="day-header">Monday</div>
+            <div class="day-header">Tuesday</div>
+            <div class="day-header">Wednesday</div>
+            <div class="day-header">Thursday</div>
+            <div class="day-header">Friday</div>
+            <div class="day-header">Saturday</div>
+        </div>
+    </div>
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 id="modal-header"></h3>
+            <h4>Add New Event</h4>
+            <div id="reason">
+                <label for="event-reason">Reason: </label>
+                <input type="text" id="event-reason" placeholder="Enter event reason">
+            </div>
+            <div id="time">
+                <label for="event-time">Time: </label>
+                <input type="time" id="event-time" placeholder="Enter event time">
+            </div>
+            <div id="colour">
+                <label for="event-colour">Colour: </label>
+                <input type="color" id="event-colour" value="#FF5733">
+            </div>
+            <button id="save-event">Save Event</button>
+            <h4>Currently Booked:</h4>
+            <div id="event-list">
+                <button id="delete-event" style="display: none;">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="closeLoginModal" class="close">&times;</span>
+            <h3>Login</h3>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <button id="submit-login">Submit</button>
+        </div>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+</html>

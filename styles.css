@@ -1,0 +1,273 @@
+.no-interaction {
+    pointer-events: none;
+}
+
+/*Global Font Styling*/
+* {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/*Calendar Container Styling*/
+#calendar-container {
+    width: 100%;
+    max-width:800px;
+    margin: 0 auto;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: bottom 10px;
+}
+
+#calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+/*Calendar Day Styling*/
+.day-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid gray;
+    min-height: 80px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.1s, transform 0.1s;
+}
+.day:hover {
+    background-color: lightgray;
+    z-index: 1;
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    border-radius: 10px;
+}
+.day:active {
+    background-color: gray;
+    transform: scale(0.95); /* Slightly shrinks when clicked */
+}
+
+/*Buttons Styling*/
+#login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#login-button:hover {
+    background-color: rgb(44, 47, 48);
+    transform: scale(1.1);
+}
+
+#login-button:active {
+    transform: scale(0.95); 
+}
+
+#prev, #next {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#prev:hover, #next:hover {
+    background-color: darkslategray;
+    transform: scale(1.1);
+}
+
+#prev:active, #next:active {
+    transform: scale(0.95); 
+}
+
+/*Modal styling*/
+#calendar-container {
+    transition: filter 0.3s
+}
+.blur {
+    filter: blur(2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 40%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    padding:10px;
+    overflow: auto;
+    background-color: gray;
+    border-radius: 15px;
+    box-shadow: 0 0 15px black;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.model-content label {
+    display: block;
+    width: 80%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.close {
+    color: black;
+    flex: 0.5;
+    align-self: flex-end;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#save-event, #submit-login {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#save-event:hover, #submit-login:hover {
+    background-color: darkslategray;
+    transform: scale(1.05);
+}
+
+#save-event:active, #submit-login:active {
+    transform: scale(0.95);
+}
+
+.event {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px 0;
+    font-size: 0.8em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.delete-event-btn {
+    background-color: rgb(255, 0, 0); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer; 
+    margin-top: 10px; 
+    margin-left: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.delete-event-btn:hover {
+    background-color: rgb(112, 0, 0);
+    transform: scale(1.05);
+}
+
+.delete-event-btn:active {
+    transform: scale(0.95);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#user-info {
+    font-weight: bold;
+    color: gray;
+}
+
+#login-modal input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#submit-login {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#submit-login:hover {
+    background-color: darkslategray;
+    transform: scale(1.05);
+}
