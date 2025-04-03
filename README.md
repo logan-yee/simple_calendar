@@ -1,4 +1,4 @@
-# Interactive Calendar Application
+# Simple Calendar Web Application
 
 A modern, responsive web-based calendar application that allows users to manage events and appointments with a clean, intuitive interface.
 
